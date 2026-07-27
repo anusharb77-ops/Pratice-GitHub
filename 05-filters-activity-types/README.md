@@ -1,4 +1,4 @@
-Testing
+Testing.
 
 # Using Event Filters and Activity Types
 
