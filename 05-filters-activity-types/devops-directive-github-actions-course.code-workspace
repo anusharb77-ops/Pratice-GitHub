@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../github-actions-course"
+		},
+		{
+			"path": ".."
+		}
+	]
+}
