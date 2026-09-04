@@ -1,0 +1,17 @@
+name: 16 - working with environement variables
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: my-app
+      ENVIRONMENT: production
+    steps:
+      - name: Print environment variables
+        run: |
+          echo "App: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
+
