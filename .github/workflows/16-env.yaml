@@ -1,17 +1,19 @@
 name: 16 - working with environement variables
 
 on:
-  workflow_dispatch:
-
+    workflow_dispatch:
+        inputs:
+            target-env:
+                type: environment
+                default: staging
 jobs:
-  demo:
-    runs-on: ubuntu-latest
-    env:
-      APP_NAME: my-app
-      ENVIRONMENT: production
-    steps:
-      - name: Print environment variables
-        run: |
-          echo "App: $APP_NAME"
-          echo "Environment: $ENVIRONMENT"
-
+    demo:
+        runs-on: ubuntu-latest
+        env:
+            APP_NAME: my-app
+            ENVIRONMENT: ${{ github.event.inputs.target-env }}
+        steps:
+            - name: Print environment variables
+              run: |
+                  echo "App: $APP_NAME"
+                  echo "Environment: $ENVIRONMENT"
